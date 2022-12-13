@@ -2,17 +2,17 @@ import { lazy } from 'solid-js';
 import type { RouteDefinition } from '@solidjs/router';
 
 import { HomePage } from '@modules/Home/pages/Home';
-import { AboutData } from '@modules/About/pages/about.data';
+import { AboutData } from '@modules/About/pages/About.data';
 
-import { RoutesMap } from '@routes/routes-map';
+import { routeMapping } from '@routes/routes-map';
 
 export const routes: RouteDefinition[] = [
   {
-    path: RoutesMap.Home,
+    path: routeMapping.Home(),
     component: HomePage,
   },
   {
-    path: RoutesMap.About,
+    path: routeMapping.About(),
     component: lazy(() =>
       import('@modules/About/pages/About').then((module) => ({ default: module.AboutPage })),
     ),
