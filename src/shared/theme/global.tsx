@@ -8,7 +8,7 @@ export const GlobalStyles: Component = () => {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: 'Font Name', serif;
+      font-family: 'Manrope', serif;
     }
 
     body {
@@ -35,67 +35,6 @@ export const GlobalStyles: Component = () => {
       @media screen and (max-width: 28em) {
         font-size: 62.5%;
       }
-    }
-
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 900;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 900;
-      font-style: italic;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: bold;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: bold;
-      font-style: italic;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: normal;
-      font-style: italic;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 300;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 300;
-      font-style: italic;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 100;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Font Name';
-      src: url('/path/to/file.ttf');
-      font-weight: 100;
-      font-style: italic;
     }
   `;
 

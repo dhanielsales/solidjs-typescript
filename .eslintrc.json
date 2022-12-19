@@ -27,6 +27,7 @@
     "import"
   ],
   "rules": {
+    "@typescript-eslint/no-namespace": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
