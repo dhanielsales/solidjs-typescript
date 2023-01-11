@@ -1,23 +1,25 @@
-import { splitProps, createSignal, createEffect } from 'solid-js';
+import { splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { css, StylesArg } from 'solid-styled-components';
 
-import { createStyleFromProps, CSSProperties } from '@shared/utils/css-properties';
+import { CSSProperties, PseudosObject } from './css-properties';
 
 import type { ComponentWithAsRequired } from '@shared/types/component-with-as';
-import { mergeClass } from '@shared/utils/merge-class';
 
-export const StyledDynamic: ComponentWithAsRequired<CSSProperties> = (_props) => {
-  const [props, rest] = splitProps(_props, ['as', 'children', 'class']);
+import { generateClass } from './generate-class';
 
-  const [htmlClass, setHtmlClass] = createSignal(css(createStyleFromProps(rest) as StylesArg));
+export interface StyledDynamicProps {
+  styling?: CSSProperties;
+  pseudos?: PseudosObject;
+}
 
-  createEffect(() => {
-    setHtmlClass(css(createStyleFromProps(rest) as StylesArg));
-  });
+export const StyledDynamic: ComponentWithAsRequired<StyledDynamicProps> = (_props) => {
+  const [props, rest] = splitProps(_props, ['as', 'children', 'pseudos', 'styling']);
+
+  // eslint-disable-next-line solid/reactivity
+  const { htmlClass } = generateClass({ styling: props.styling, pseudos: props.pseudos });
 
   return (
-    <Dynamic class={mergeClass(htmlClass(), props.class)} component={props.as} {...rest}>
+    <Dynamic classList={{ [htmlClass()]: true }} component={props.as} {...rest}>
       {props.children}
     </Dynamic>
   );

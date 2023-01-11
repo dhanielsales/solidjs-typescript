@@ -1,11 +1,13 @@
 import { splitProps } from 'solid-js';
-import { StyledDynamic } from '@features/StyledDynamic';
 
-import { CSSProperties } from '@shared/utils/css-properties';
+import { StyledDynamic } from '@features/StyledDynamic';
+import type { StyledDynamicProps } from '@features/StyledDynamic';
 
 import type { ComponentWithAs } from '@shared/types/component-with-as';
 
-export const Box: ComponentWithAs<CSSProperties> = (_props) => {
+type BoxProps = StyledDynamicProps;
+
+export const Box: ComponentWithAs<BoxProps> = (_props) => {
   const [props, rest] = splitProps(_props, ['as', 'children']);
 
   return (
