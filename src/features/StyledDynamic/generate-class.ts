@@ -1,6 +1,6 @@
 import { Accessor, createSignal, createEffect } from 'solid-js';
 
-import { CSSProperties, PseudosObject } from './css-properties';
+import { CSSProperties, PseudosObject } from './types';
 
 import { createClass } from './create-class';
 

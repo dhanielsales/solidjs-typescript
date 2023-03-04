@@ -11,6 +11,10 @@
     "types": [
       "vite/client"
     ],
+    "typeRoots": [
+      "src/@types",
+      "node_modules/@types",
+    ],
     "noEmit": true,
     "isolatedModules": true,
     "baseUrl": ".",

@@ -1,9 +1,9 @@
 import { splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 
-import { CSSProperties, PseudosObject } from './css-properties';
+import { CSSProperties, PseudosObject } from './types';
 
-import type { ComponentWithAsRequired } from '@shared/types/component-with-as';
+import type { ComponentWithAsRequired } from '@shared/types/ComponentWithAs';
 
 import { generateClass } from './generate-class';
 

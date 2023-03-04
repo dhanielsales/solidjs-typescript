@@ -1,6 +1,6 @@
 import { css } from 'solid-styled-components';
 
-import { CSSProperties, PseudosObject, Pseudos } from './css-properties';
+import { CSSProperties, PseudosObject, Pseudos } from './types';
 
 interface Props {
   styling?: CSSProperties;
@@ -332,7 +332,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('text-decoration-skip-ink', styling.textDecorationSkipInk)}
     ${cssHelper('text-decoration-style', styling.textDecorationStyle)}
     ${cssHelper('text-decoration-thickness', styling.textDecorationThickness)}
-    ${cssHelper('text-decoration-width', styling.textDecorationWidth)}
     ${cssHelper('text-emphasis-color', styling.textEmphasisColor)}
     ${cssHelper('text-emphasis-position', styling.textEmphasisPosition)}
     ${cssHelper('text-emphasis-style', styling.textEmphasisStyle)}
@@ -494,7 +493,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('-moz-box-sizing', styling.MozBoxSizing)}
     ${cssHelper('-moz-column-count', styling.MozColumnCount)}
     ${cssHelper('-moz-column-fill', styling.MozColumnFill)}
-    ${cssHelper('-moz-column-gap', styling.MozColumnGap)}
     ${cssHelper('-moz-column-rule-color', styling.MozColumnRuleColor)}
     ${cssHelper('-moz-column-rule-style', styling.MozColumnRuleStyle)}
     ${cssHelper('-moz-column-rule-width', styling.MozColumnRuleWidth)}
@@ -528,7 +526,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('-moz-window-dragging', styling.MozWindowDragging)}
     ${cssHelper('-moz-window-shadow', styling.MozWindowShadow)}
     ${cssHelper('-ms-accelerator', styling.msAccelerator)}
-    ${cssHelper('-ms-align-self', styling.msAlignSelf)}
     ${cssHelper('-ms-block-progression', styling.msBlockProgression)}
     ${cssHelper('-ms-content-zoom-chaining', styling.msContentZoomChaining)}
     ${cssHelper('-ms-content-zoom-limit-max', styling.msContentZoomLimitMax)}
@@ -549,7 +546,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('-ms-hyphenate-limit-zone', styling.msHyphenateLimitZone)}
     ${cssHelper('-ms-hyphens', styling.msHyphens)}
     ${cssHelper('-ms-ime-align', styling.msImeAlign)}
-    ${cssHelper('-ms-justify-self', styling.msJustifySelf)}
     ${cssHelper('-ms-line-break', styling.msLineBreak)}
     ${cssHelper('-ms-order', styling.msOrder)}
     ${cssHelper('-ms-overflow-style', styling.msOverflowStyle)}
@@ -621,7 +617,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('-webkit-clip-path', styling.WebkitClipPath)}
     ${cssHelper('-webkit-column-count', styling.WebkitColumnCount)}
     ${cssHelper('-webkit-column-fill', styling.WebkitColumnFill)}
-    ${cssHelper('-webkit-column-gap', styling.WebkitColumnGap)}
     ${cssHelper('-webkit-column-rule-color', styling.WebkitColumnRuleColor)}
     ${cssHelper('-webkit-column-rule-style', styling.WebkitColumnRuleStyle)}
     ${cssHelper('-webkit-column-rule-width', styling.WebkitColumnRuleWidth)}
@@ -724,7 +719,6 @@ function createCss(styling?: CSSProperties) {
     ${cssHelper('scroll-snap-points-y', styling.scrollSnapPointsY)}
     ${cssHelper('scroll-snap-type-x', styling.scrollSnapTypeX)}
     ${cssHelper('scroll-snap-type-y', styling.scrollSnapTypeY)}
-    ${cssHelper('scrollbar-track-color', styling.scrollbarTrackColor)}
     ${cssHelper('-khtml-box-align', styling.KhtmlBoxAlign)}
     ${cssHelper('-khtml-box-direction', styling.KhtmlBoxDirection)}
     ${cssHelper('-khtml-box-flex', styling.KhtmlBoxFlex)}

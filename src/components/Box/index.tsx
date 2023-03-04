@@ -3,7 +3,7 @@ import { splitProps } from 'solid-js';
 import { StyledDynamic } from '@features/StyledDynamic';
 import type { StyledDynamicProps } from '@features/StyledDynamic';
 
-import type { ComponentWithAs } from '@shared/types/component-with-as';
+import type { ComponentWithAs } from '@shared/types/ComponentWithAs';
 
 type BoxProps = StyledDynamicProps;
 
