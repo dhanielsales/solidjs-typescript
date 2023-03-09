@@ -17,7 +17,10 @@ export default defineConfig({
         "@shared": path.resolve(__dirname, "./src/shared"),
         "@root": path.resolve(__dirname, "./src/root"),
     }
-},
+  },
+  server: {
+    port: 8080,
+  },
   plugins: [solidPlugin(), eslint()],
   build: {
     target: 'esnext',
